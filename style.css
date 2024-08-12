@@ -1,125 +1,77 @@
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  /*
-    2. Remove default margin
-  */
-  * {
-    margin: 0;
-  }
-  /*
-    Typographic tweaks!
-    3. Add accessible line-height
-    4. Improve text rendering
-  */
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  /*
-    5. Improve media defaults
-  */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  /*
-    6. Remove built-in form typography styles
-  */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  /*
-    7. Avoid text overflows
-  */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  /*
-    8. Create a root stacking context
-  */
-  #root, #__next {
-    isolation: isolate;
-  }
-
-  @media only screen and (max-width: 375px){
+  @media screen and (max-width: 375px){
 
 body {
-    display: flexbox;
+    display: flex;
     min-height: 100vh;
     background-color: hsl(30, 38%, 92%);
+    margin: 0;
+    box-sizing:var(.2rem);
         }
 
+
 .grid-container {
-    display: flex;
-    max-width: 30%;
-    border-radius: 10px;
-    padding-top: 20px;
-    margin-left: 30%;
+  position: relative;
+  flex-direction: column;
+  padding: 1.5rem;
+  }
+
+img {
+  max-width: 100%;
+  border-radius: 1rem 1rem 0 0;
 }
 
-.grid-img {
-    display: inline;
-    grid-row: unset;
-    border-radius: 10% 0 0 10%;
+picture{
+  display: flex;
 }
 
 .grid-text {
-    display: inline;
-    border-radius: 0 5% 5% 0;
-    font-size: 15px;
-    width: 310px;
-    height: 368px;
-    padding: 1.5rem;
     color: hsl(228, 12%, 48%);
     background-color: hsl(0, 0%, 100%);
-    }
-
-
-img {
-    border-radius: 5% 0 0 5%;
-    background-size: contain;
-    max-width: 700px;
-    max-height: 700px;
-}
+    padding: 1.3rem;
+    border-radius: 0 0 1rem 1rem;
+  }
 
 .ribbon-text {
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
-}
+    margin-top: 0;
+    font-size: .8rem;
+    letter-spacing: .2rem;
+    }
 
-.essence {
+.gabrielle {
 font-family: "Fraunces", sans-serif;
 font-weight: 700;
+font-size: 1.6rem;
 color: black;
+margin-top: 0;
+margin-bottom: 0;
 }
 
 .floral {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
-    padding-right: 40px;
-    line-height: 1.7;
+    font-size: .8rem;
+    line-height: 1.3rem;
     }
 
 .new-price {
-    font-family: "Fraunces", sans-serif;
-    font-size: 40px;
-    font-weight: 700;
-    color: hsl(158, 36%, 37%);
-    display: inline;
+  font-size: 2rem;
+  display: flex;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+  margin-top: 0;
+  margin-bottom: .5rem;
 }
 
 s {
-    position: relative;
-    bottom: 10px;
-    left: 10px;
+    font-size: .8rem;
     font-family: "Montserrat", sans-serif;
+    margin-left: 6%;
+    margin-top: 4%;
     color: hsl(228, 12%, 48%);
     font-weight: 400;
-    font-size: 15px;
 }
 
 
@@ -127,18 +79,111 @@ button {
     display: flex;
     font-family: "Montserrat", sans-serif;
     color: hsl(0, 0%, 100%);
-    position: relative;
+    padding: 1rem;
+    border-radius: .5rem;
+    align-content: center;
     justify-content: center;
-    align-items: center;
-    word-spacing: 1px;
+    width: 100%;
+    height: 3rem;
     border: none;
-    padding: 5px;
-    border-radius: 10px;
-    width: 250px;
-    height: 50px;
     background-color: hsl(158, 36%, 37%);
 }
-svg {
-    padding-right: 10px;
+
+}
+
+/*For desktop*/
+@media screen and (min-width:376px) {
+
+
+body {
+  min-height: 10vh;
+  background-color: hsl(30, 38%, 92%);
+      }
+
+div{
+  display: flex;
+  max-width: fit-content;
+}
+
+.grid-container {
+  justify-content: center;
+  padding: 1rem;
+}
+
+img {
+  width: 100%;
+  min-width: 25rem;
+  height: auto;
+}
+
+picture{
+display: flex;
+width: 100%;
+}
+
+.grid-text {
+  display:flex;
+  flex-direction: column;
+  color: hsl(228, 12%, 48%);
+  background-color: hsl(0, 0%, 100%);
+  padding: 1.3rem;
+}
+
+.ribbon-text {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  margin-top: 0;
+  font-size: .8rem;
+  letter-spacing: .2rem;
+  }
+
+.gabrielle {
+font-family: "Fraunces", sans-serif;
+font-weight: 700;
+font-size: 1.6rem;
+color: black;
+margin-top: 0;
+margin-bottom: 0;
+}
+
+.floral {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: .8rem;
+  line-height: 1.3rem;
+  }
+
+.new-price {
+font-size: 2rem;
+display: flex;
+font-family: "Fraunces", sans-serif;
+font-weight: 700;
+color: hsl(158, 36%, 37%);
+margin-top: 0;
+margin-bottom: .5rem;
+}
+
+s {
+  font-size: .8rem;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 6%;
+  margin-top: 4%;
+  color: hsl(228, 12%, 48%);
+  font-weight: 400;
+}
+
+
+button {
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  color: hsl(0, 0%, 100%);
+  padding: 1rem;
+  border-radius: .5rem;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 3rem;
+  border: none;
+  background-color: hsl(158, 36%, 37%);
 }
 }
