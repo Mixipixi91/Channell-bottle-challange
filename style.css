@@ -1,189 +1,112 @@
-  @media screen and (max-width: 375px){
 
 body {
-    display: flex;
-    min-height: 100vh;
-    background-color: hsl(30, 38%, 92%);
-    margin: 0;
-    box-sizing:var(.2rem);
-        }
-
-
-.grid-container {
-  position: relative;
-  flex-direction: column;
-  padding: 1.5rem;
-  }
-
-img {
-  max-width: 100%;
-  border-radius: 1rem 1rem 0 0;
-}
-
-picture{
-  display: flex;
-}
-
-.grid-text {
-    color: hsl(228, 12%, 48%);
-    background-color: hsl(0, 0%, 100%);
-    padding: 1.3rem;
-    border-radius: 0 0 1rem 1rem;
-  }
-
-.ribbon-text {
-    font-family: "Montserrat", sans-serif;
-    text-transform: uppercase;
-    margin-top: 0;
-    font-size: .8rem;
-    letter-spacing: .2rem;
-    }
-
-.gabrielle {
-font-family: "Fraunces", sans-serif;
-font-weight: 700;
-font-size: 1.6rem;
-color: black;
-margin-top: 0;
-margin-bottom: 0;
-}
-
-.floral {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: .8rem;
-    line-height: 1.3rem;
-    }
-
-.new-price {
-  font-size: 2rem;
-  display: flex;
-  font-family: "Fraunces", sans-serif;
-  font-weight: 700;
-  color: hsl(158, 36%, 37%);
-  margin-top: 0;
-  margin-bottom: .5rem;
-}
-
-s {
-    font-size: .8rem;
-    font-family: "Montserrat", sans-serif;
-    margin-left: 6%;
-    margin-top: 4%;
-    color: hsl(228, 12%, 48%);
-    font-weight: 400;
-}
-
-
-button {
-    display: flex;
-    font-family: "Montserrat", sans-serif;
-    color: hsl(0, 0%, 100%);
-    padding: 1rem;
-    border-radius: .5rem;
-    align-content: center;
-    justify-content: center;
-    width: 100%;
-    height: 3rem;
-    border: none;
-    background-color: hsl(158, 36%, 37%);
-}
-
-}
-
-/*For desktop*/
-@media screen and (min-width:376px) {
-
-
-body {
-  min-height: 10vh;
-  background-color: hsl(30, 38%, 92%);
-      }
-
-div{
-  display: flex;
-  max-width: fit-content;
-}
-
-.grid-container {
+  display: grid;
   justify-content: center;
-  padding: 1rem;
+  justify-items: center;
+  max-width: 100%;
+  background-color: hsl(30, 38%, 92%);
 }
 
-img {
-  width: 100%;
-  min-width: 25rem;
-  height: auto;
+.grid-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 100%);
 }
 
-picture{
-display: flex;
-width: 100%;
+.col-3 {
+  display: inline;
+}
+
+.grid-img {
+  display: inline;
+  border-radius: 10% 0 0 10%;
 }
 
 .grid-text {
-  display:flex;
-  flex-direction: column;
+  display: inline;
+  border-radius: 0 5% 5% 0;
+  font-size: 15px;
+  width: 310px;
+  height: 368px;
+  padding: 1.5rem;
   color: hsl(228, 12%, 48%);
-  background-color: hsl(0, 0%, 100%);
-  padding: 1.3rem;
+  }
+
+img {
+  border-radius: 5% 0 0 5%;
+  background-size: contain;
+  max-width: 700px;
+  max-height: 700px;
+}
+
+p {
+  display: inline;
 }
 
 .ribbon-text {
+  display: inline;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  margin-top: 0;
-  font-size: .8rem;
-  letter-spacing: .2rem;
-  }
+}
 
-.gabrielle {
+hgroup {
+  display: inline;
+}
+
+h2 {
+  display: inline;
+}
+
+.essence {
 font-family: "Fraunces", sans-serif;
 font-weight: 700;
-font-size: 1.6rem;
 color: black;
-margin-top: 0;
-margin-bottom: 0;
 }
 
 .floral {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: .8rem;
-  line-height: 1.3rem;
+  padding-right: 40px;
+  line-height: 1.7;
+  }
+
+  .gabrielle {
+    color: black;
   }
 
 .new-price {
-font-size: 2rem;
-display: flex;
-font-family: "Fraunces", sans-serif;
-font-weight: 700;
-color: hsl(158, 36%, 37%);
-margin-top: 0;
-margin-bottom: .5rem;
+  font-family: "Fraunces", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+  display: inline;
 }
 
 s {
-  font-size: .8rem;
+  position: relative;
+  bottom: 10px;
+  left: 10px;
   font-family: "Montserrat", sans-serif;
-  margin-left: 6%;
-  margin-top: 4%;
   color: hsl(228, 12%, 48%);
   font-weight: 400;
+  font-size: 15px;
 }
-
 
 button {
   display: flex;
   font-family: "Montserrat", sans-serif;
   color: hsl(0, 0%, 100%);
-  padding: 1rem;
-  border-radius: .5rem;
-  align-content: center;
   justify-content: center;
-  width: 100%;
-  height: 3rem;
+  word-spacing: 1px;
   border: none;
+  padding: 10px;
+  border-radius: 10px;
+  width: 250px;
+  height: 50px;
   background-color: hsl(158, 36%, 37%);
 }
+.shopping-cart {
+  display: inline;
+  /* padding-right: 10px; */
 }
