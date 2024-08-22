@@ -1,77 +1,64 @@
+/* CSS reset */
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 36px;
+}
 
 body {
   display: grid;
   justify-content: center;
   justify-items: center;
-  max-width: 100%;
   background-color: hsl(30, 38%, 92%);
 }
 
 .grid-container {
   display: flex;
   justify-content: center;
-  border-radius: 10px;
-  background-color: hsl(0, 0%, 100%);
-}
-
-.col-3 {
-  display: inline;
+  padding: 100px;
 }
 
 .grid-img {
-  display: inline;
-  border-radius: 10% 0 0 10%;
+  max-width: 100%;
+  border-radius: 3% 0 0 3%;
 }
 
 .grid-text {
-  display: inline;
-  border-radius: 0 5% 5% 0;
-  font-size: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0 3% 3% 0;
+  font-size: 14px;
   width: 310px;
-  height: 368px;
-  padding: 1.5rem;
+  height: 500px;
+  padding: 2.5rem;
+  background-color: hsl(0, 0%, 100%);
   color: hsl(228, 12%, 48%);
   }
 
 img {
-  border-radius: 5% 0 0 5%;
-  background-size: contain;
   max-width: 700px;
-  max-height: 700px;
-}
-
-p {
-  display: inline;
+  max-height: 500px;
+  border-radius: 3% 0 0 3%;
 }
 
 .ribbon-text {
-  display: inline;
-  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-}
-
-hgroup {
-  display: inline;
-}
-
-h2 {
-  display: inline;
-}
-
-.essence {
-font-family: "Fraunces", sans-serif;
-font-weight: 700;
-color: black;
+  letter-spacing: 5px;
 }
 
 .floral {
-  font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  padding-right: 40px;
+  /* padding-right: 40px; */
   line-height: 1.7;
+  color: hsl(228, 12%, 48%);
   }
 
-  .gabrielle {
+h2 {
+    font-family: "Fraunces", sans-serif;
+    font-weight: 800;
+    font-size: 36px;
     color: black;
   }
 
@@ -98,15 +85,26 @@ button {
   font-family: "Montserrat", sans-serif;
   color: hsl(0, 0%, 100%);
   justify-content: center;
+  align-items: center;
   word-spacing: 1px;
   border: none;
   padding: 10px;
   border-radius: 10px;
   width: 250px;
   height: 50px;
+  font-weight: 600;
   background-color: hsl(158, 36%, 37%);
 }
+
 .shopping-cart {
-  display: inline;
-  /* padding-right: 10px; */
+ width: 25px;
+ height: 15px;
+}
+
+@media only screen and (max-width:920px) { 
+  .grid-container{
+    display: flex;
+    flex-direction: column;
+  }
+
 }
