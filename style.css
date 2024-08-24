@@ -20,9 +20,12 @@ body {
   padding: 100px;
 }
 
+.mobile-image{
+  display: none;
+}
+
 .grid-img {
   max-width: 100%;
-  border-radius: 3% 0 0 3%;
 }
 
 .grid-text {
@@ -101,10 +104,36 @@ button {
  height: 15px;
 }
 
-@media only screen and (max-width:920px) { 
+@media only screen and (max-width:768px) { 
   .grid-container{
     display: flex;
     flex-direction: column;
+    max-height: fit-content;
+  }
+
+  .desktop-image {
+    display: none;
+  }
+
+  .mobile-image{
+    display: block;
+    max-width: 100%;
+  }
+
+  .grid-img{
+    height: auto;
+    width: auto;
+    margin: 0px;
+  }
+
+  img{
+    border-radius: 3% 3% 0 0;
+  }
+
+  .grid-text{
+    width: auto;
+    height: auto;
+    border-radius: 0 0 3% 3%;
   }
 
 }
